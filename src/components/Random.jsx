@@ -35,7 +35,7 @@ function Random() {
   
   return (
       <Wrapper>
-        <h3>Popular Picks</h3>
+        <h3>What's Popular</h3>
         <Splide 
           options={ {
             perPage: 3,
@@ -100,6 +100,7 @@ const Card = styled.div`
     bottom: 0%;
     transform: translate(-50%, 0%);
     color: white;
+    text-shadow: none;
     width: 100%;
     text-align: center;
     font-weight: 600;

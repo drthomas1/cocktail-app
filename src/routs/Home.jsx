@@ -13,7 +13,7 @@ export default function Home() {
   // console.log('what2', details)
 
   const getSpecial = () => {
-    axios.get('https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail')
+    axios.get('https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic')
     .then(res => {
       console.log(res.data.drinks[0])
         console.log('special', res.data.drinks)
@@ -34,7 +34,7 @@ export default function Home() {
         transition = {{ duration: 0.5 }}
     >
       <Container >
-        <Content style={{backgroundImage: `url("images/cocktails-1.jpg")`}}>
+        <Content style={{backgroundImage: `url("images/cocktails-8.jpg")`}}>
           <Title>The Cocktail App</Title>
           <h3>Find a cocktail</h3>
           <Search />

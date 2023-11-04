@@ -20,6 +20,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0% 5%;
+  padding-bottom: 12.5px;
   color: white;
   background-color: rgb(11, 11, 58);
 }

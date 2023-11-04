@@ -7,7 +7,7 @@ import axios from 'axios';
 export default function Recipe() {
   let params = useParams();
   const [details, setDetails] = useState({});
-  const [activeTab, setActiveTab] = useState('instructions');
+  const [activeTab, setActiveTab] = useState('ingredients');
 
   const getCocktail = () => {
     axios.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${params.name}`)
@@ -32,26 +32,18 @@ export default function Recipe() {
       <Info>
         <div>
           <Button 
-            className={activeTab === 'instructions' ? 'active' : ''} 
-            onClick={() => setActiveTab("instructions")}
-          >
-            Instructions
-          </Button>
-          <Button 
             className={activeTab === 'ingredients' ? 'active' : ''} 
             onClick={() => setActiveTab("ingredients")}
           >
             Ingredients
           </Button>
+          <Button 
+            className={activeTab === 'instructions' ? 'active' : ''} 
+            onClick={() => setActiveTab("instructions")}
+          >
+            Instructions
+          </Button>
         </div>
-
-        {activeTab === 'instructions' && (
-          <div>
-            <h4 dangerouslySetInnerHTML={{ __html: details.strInstructions }}></h4>
-            <br />
-            <h4>Serve: <span>{details.strGlass}</span></h4>
-          </div>
-        )}
         {activeTab === 'ingredients' &&(
           <ul>
             {details.strIngredient1 ? <li>{details.strIngredient1} <span>{details.strMeasure1}</span></li> : null }
@@ -72,7 +64,13 @@ export default function Recipe() {
             
         </ul>
         )}
-        
+        {activeTab === 'instructions' && (
+          <div>
+            <h4 dangerouslySetInnerHTML={{ __html: details.strInstructions }}></h4>
+            <br />
+            <h4>Serve: <span>{details.strGlass}</span></h4>
+          </div>
+        )}
       </Info>
     </DetailWrapper>
   )

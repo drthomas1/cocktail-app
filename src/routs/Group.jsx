@@ -10,7 +10,7 @@ export default function Group() {
     let params = useParams();
   
     const getDrink = (name) => {
-      axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${name}`)
+      axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?${name}`)
       .then(res => {
         console.log(res.data.drinks)
         setDrink(res.data.drinks.slice(0, 30))
@@ -55,6 +55,7 @@ const Grid = styled(motion.div)`
 const Card = styled.div`
     img {
         width: 100%;
+        max-width: 500px;
         border-radius: 2rem;
         border: 2px solid white;
     }

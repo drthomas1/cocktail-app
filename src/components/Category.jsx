@@ -5,25 +5,25 @@ import {NavLink} from 'react-router-dom';
 export default function Category() {
   return (
     <List>
-        <SLink to={'/group/vodka'}>
+        <SLink to={'/group/i=vodka'}>
             
             <h4>Vodka</h4>
         </SLink>
-        <SLink to={'/group/rum'}>
+        <SLink to={'/group/i=rum'}>
             
             <h4>Rum</h4>
         </SLink>
-        <SLink to={'/group/gin'}>
+        <SLink to={'/group/i=gin'}>
             
             <h4>Gin</h4>
         </SLink>
-        <SLink to={'/group/whiskey'}>
-            
-            <h4>Whiskey</h4>
-        </SLink>
-        <SLink to={'/group/tequila'}>
+        <SLink to={'/group/i=tequila'}>
             
             <h4>Tequila</h4>
+        </SLink>
+        <SLink to={'/group/a=Non_Alcoholic'}>
+            
+            <h4>Mocktail</h4>
         </SLink>
     </ List>
   )
