@@ -32,6 +32,9 @@ const Top = styled.div`
   justify-content: center;
   align-items: center;
   color: #d136a3;
+
+  @media screen and (max-width: 795px) {
+        }
 `
 
 const Nav = styled.div`

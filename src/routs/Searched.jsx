@@ -50,6 +50,7 @@ const Grid = styled.div`
     grid-gap: 3rem;
 `;
 const Card = styled.div`
+    margin: auto;
     img {
         width: 100%;
         border-radius: 2rem;

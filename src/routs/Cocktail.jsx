@@ -95,6 +95,7 @@ const DetailWrapper = styled.div`
   }
 
   img{
+    max-width: 550px;
     object-fit: cover;
     border-radius: 12.5%;
     border: 2px solid white;
@@ -134,14 +135,19 @@ const DetailWrapper = styled.div`
 `;
 
 const Button = styled.button`
-  padding: 1rem 2rem;
-  border-radius: 5%;
+  /* padding: 1rem 2rem; */
+  width: 150px;
+  padding: 1rem 0;
   margin-right: 1rem;
   font-weight: 600;
+  color: white;
+  background: rgb(11, 11, 58, 1);
+  border: 2px solid gray;
   transition: all ease-in-out 250ms; 
 
   @media screen and (max-width: 1024px) {
     margin-top: 2rem;
+    width: 100px;
         }
 
 `;
@@ -155,5 +161,7 @@ const Info = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-        }
+    max-width: 350px;
+    width: auto;
+  }
 `;

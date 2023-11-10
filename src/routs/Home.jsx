@@ -67,13 +67,17 @@ const Content = styled.div`
   align-items: center;
   z-index: 2;
   width: 100%;
-  height: calc(100vh - 150px);
+  min-height: calc(100vh - 150px);
   color: white;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   text-shadow: 0 0 5px #fff, 0 0 1px #fff, 0 0 2px #e60073, 0 0 3px #e60073, 0 0 4px #e60073, 0 0 5px #e60073, 0 0 6px #e60073;
   /* rgb(230, 0, 115) */
+
+  @media only screen and (max-height: 650px), (max-width: 768px) {
+   
+  }
 
   .icon-wrapper{
       position: absolute;
@@ -82,6 +86,10 @@ const Content = styled.div`
       z-index: 3;
       cursor: pointer;
       animation: MoveUpDown 1.5s linear infinite;
+
+      @media (max-height: 745px) {
+        display: none;
+      }
     }
 
     @keyframes MoveUpDown {
@@ -103,6 +111,7 @@ const glow = keyframes`
   }
 `
 const Title = styled.div`
+  text-align: center;
   text-transform: uppercase;
   font-size: 3rem;
   animation: ${glow} 1s ease-in-out infinite alternate;
