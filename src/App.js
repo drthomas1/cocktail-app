@@ -10,15 +10,15 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Top>
-        <Nav>
-          <Box to={"/"}>
-              <FaCocktail/>
-          </Box>
-            {/* <Logo to={"/"}> The Cocktail App </Logo> */}
-        </Nav>
-        <Category />
-      </Top>
+        <Top>
+          <Nav>
+            <Box to={"/"}>
+                <FaCocktail/>
+            </Box>
+              {/* <Logo to={"/"}> The Cocktail App </Logo> */}
+          </Nav>
+          <Category />
+        </Top>
         <Routs />
       </BrowserRouter>
     </div>
