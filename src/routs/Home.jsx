@@ -8,23 +8,6 @@ import Search from '../components/Search';
 import Random from '../components/Random';
 
 export default function Home() {
-  
-
-  // console.log('what2', details)
-
-  const getSpecial = () => {
-    axios.get('https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic')
-    .then(res => {
-      console.log(res.data.drinks[0])
-        console.log('special', res.data.drinks)
-    }).catch(err => {
-        console.log(err)
-    })
-    }
-
-    useEffect(()=> {
-        getSpecial();
-    },[]);
 
   return (
     <motion.div
@@ -41,7 +24,8 @@ export default function Home() {
           <a href="#content-2" className='icon-wrapper'>
             <IoIosArrowDown/>
           </a>
-          <Gradient></Gradient>
+          <Gradient/>
+          <Gradient2/>
         </Content>
         <Content id="content-2">
           <Random />
@@ -71,12 +55,16 @@ const Content = styled.div`
   color: white;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: left;
   text-shadow: 0 0 5px #fff, 0 0 1px #fff, 0 0 2px #e60073, 0 0 3px #e60073, 0 0 4px #e60073, 0 0 5px #e60073, 0 0 6px #e60073;
   /* rgb(230, 0, 115) */
 
   @media only screen and (max-height: 650px), (max-width: 768px) {
    
+  }
+
+  h3 {
+    text-shadow: none;
   }
 
   .icon-wrapper{
@@ -125,4 +113,12 @@ const Gradient = styled.div`
   background-image: linear-gradient(to right, rgb(11, 11, 58), transparent, rgb(11, 11, 58)), linear-gradient(to bottom, rgb(11, 11, 58), transparent, rgb(11, 11, 58));
   opacity: 1;
   z-index: -1;
+`
+const Gradient2 = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(11, 11, 58);
+  opacity: 0.2;
+  z-index: -2;
 `
