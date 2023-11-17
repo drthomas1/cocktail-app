@@ -53,7 +53,6 @@ useEffect(() => {
 }, [itemOffset, itemsPerPage, drink]);
 
 
-// Invoke when user click to request another page.
 const handlePageClick = (event) => {
   const newOffset = (event.selected * itemsPerPage) % drink.length;
   setItemOffset(newOffset);

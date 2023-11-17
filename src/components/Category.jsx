@@ -113,7 +113,7 @@ const Hamburger = styled.div`
 
   &.active{
     svg{
-          transform: rotate(90deg);
+      transform: rotate(90deg);
     }
   }
 `;
